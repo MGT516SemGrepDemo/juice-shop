@@ -23,4 +23,4 @@ jobs:
       image: semgrep/semgrep
     steps:
     - uses: actions/checkout@v4
-    - run: apk add nodejs npm && npm install --lockfile-version 3 --package-lock-only && semgrep ci
+    - run: apk add nodejs npm && npm install -g @angular/cli@latest && npm install --lockfile-version 3 --package-lock-only && semgrep ci
